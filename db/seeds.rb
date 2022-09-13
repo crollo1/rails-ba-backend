@@ -1,17 +1,18 @@
 
 Airplane.destroy_all
 
-Airplane.create!(
+Airplane.create!({
 
-    name: '737',
+    name: '747',
 
-    columns: ['A', 'B', 'C', 'D'],
+    columns: 'A', 'B', 'C', 'D',
 
-    rows: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-        11, 12, 13, 14, 15, 16, 17, 18,
-        19, 20, 21, 22, 23, 24]
+    rows: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+    11, 12, 13, 14, 15, 16, 17, 18, 
+    19, 20, 21, 22, 23, 24,
+    
 
 
-)
+})
 
 puts "Created #{ Airplane.count } airplane."

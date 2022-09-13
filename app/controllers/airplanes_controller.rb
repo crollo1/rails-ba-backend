@@ -10,6 +10,7 @@ class AirplanesController < ApplicationController
     end #new
 
     def create
+        
         secret = Airplane.create content: params[:content]
 
         if airplane.persisted?
