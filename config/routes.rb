@@ -1,3 +1,9 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    
+  # API endpoints for Secret model
+  # - to be used by React frontend AJAX requests
+
+  get '/airplanes' => 'airplanes#index'       # Airplane.all
+  post '/airplanes' => 'airplanes#create'     # Airplane.create
+
 end
