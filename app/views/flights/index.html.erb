@@ -1,0 +1,17 @@
+
+<h2>All Flights</h2>
+
+<ul>
+
+  <% @flight.each do |flight| %>
+    <li>
+    
+      <%= flight.date %>
+      <%= flight.flight %>
+      <%= flight.origin %>
+      <%= flight.destination %>
+
+    </li>
+  <% end %>
+
+</ul>

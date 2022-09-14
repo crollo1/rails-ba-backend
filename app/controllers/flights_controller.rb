@@ -6,22 +6,35 @@ class FlightsController < ApplicationController
 
     def new
         
+        @flight = Flight.new
+
     end #new
 
     def create
 
-        flight = Flight.create content: params[:content]
+        @flight = Flight.create!(
 
-        if flight.persisted?
-            render json: flight
-        else
-            render json: { error: 'Count not create flight' }, status: 422
-        end
-        
+            date: params[:flight][:date],
+            flight: params[:flight][:flight],
+            origin: params[:flight][:flight],
+            destination: params[:flight][:flight]
+
+        ) 
+
+        # if flight.persisted?
+        #     render json: flight
+        # else
+        #     render json: { error: 'Count not create flight' }, status: 422
+        # end
+
+        redirect_to flights_path
+
     end #create
 
     def index
-        render json: Flight.all
+
+        @flight = Flight.all
+        
     end #index
 
     def show

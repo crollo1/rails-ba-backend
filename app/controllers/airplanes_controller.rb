@@ -14,9 +14,11 @@ class AirplanesController < ApplicationController
     def create
     
         @airplane = Airplane.create!(
+
             name: params[:airplane][:name],
             row: params[:airplane][:row],
             column: params[:airplane][:column]
+            
         ) 
 
         # if @airplane.persisted?

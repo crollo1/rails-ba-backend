@@ -1,19 +1,24 @@
 
-<%= form_with model: @airplane, local: true do |f| %>
+<%= form_with model: @flight, local: true do |f| %>
 
-    <%= f.label :name %>
+    <%= f.label :date %>
     <br>
-    <%= f.text_field :name %>
+    <%= f.date_field :date %>
     <br><br>
 
-    <%= f.label :row %>
+    <%= f.label :flight %>
     <br>
-    <%= f.number_field :row %>
+    <%= f.text_field :flight %>
     <br><br>
 
-    <%= f.label :column %>
+    <%= f.label :origin %>
     <br>
-    <%= f.number_field :column %>
+    <%= f.text_field :origin %>
+    <br><br>
+
+    <%= f.label :destination %>
+    <br>
+    <%= f.text_field :destination %>
     <br><br>
 
     <%= f.submit %>
