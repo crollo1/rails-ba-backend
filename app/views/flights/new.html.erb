@@ -1,30 +1,40 @@
 <h2>New Flight</h2>
 
-<%= form_with model: @flight, local: true do |f| %>
 
-    <%= f.label :date %>
-    <br>
-    <%= f.date_field :date %>
-    <br><br>
+<div class="newflight">
 
-    <%= f.label :flight %>
-    <br>
-    <%= f.text_field :flight %>
-    <br><br>
+    <div class="newflightform">
 
-    <%= f.label :origin %>
-    <br>
-    <%= f.text_field :origin %>
-    <br><br>
+        <%= form_with model: @flight, local: true do |f| %>
 
-    <%= f.label :destination %>
-    <br>
-    <%= f.text_field :destination %>
-    <br><br>
+            <%= f.label :date %>
+            <br>
+            <%= f.date_field :date %>
+            <br><br>
 
-    <%= f.collection_select :airplane_id, Airplane.order(:name), :id, :name %>
+            <%= f.label :flight %>
+            <br>
+            <%= f.text_field :flight %>
+            <br><br>
 
-    <%= f.submit %>
+            <%= f.label :origin %>
+            <br>
+            <%= f.text_field :origin %>
+            <br><br>
+
+            <%= f.label :destination %>
+            <br>
+            <%= f.text_field :destination %>
+            <br><br>
+
+            <%= f.collection_select :airplane_id, Airplane.order(:name), :id, :name %>
+
+            <%= f.submit %>
 
 
-<% end %>
+        <% end %>
+
+    </div>
+
+</div>    
+    

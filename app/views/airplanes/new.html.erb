@@ -1,23 +1,31 @@
 <h2>New Plane</h2>
 
-<%= form_with model: @airplane, local: true do |f| %>
+<div class="newplane">
 
-    <%= f.label :name %>
-    <br>
-    <%= f.text_field :name %>
-    <br><br>
+    <div class="newplaneform">
 
-    <%= f.label :row %>
-    <br>
-    <%= f.number_field :row %>
-    <br><br>
+        <%= form_with model: @airplane, local: true do |f| %>
 
-    <%= f.label :column %>
-    <br>
-    <%= f.number_field :column %>
-    <br><br>
+            <%= f.label :name %>
+            <br>
+            <%= f.text_field :name %>
+            <br><br>
 
-    <%= f.submit %>
+            <%= f.label :row %>
+            <br>
+            <%= f.number_field :row %>
+            <br><br>
+
+            <%= f.label :column %>
+            <br>
+            <%= f.number_field :column %>
+            <br><br>
+
+            <%= f.submit %>
 
 
-<% end %>
+        <% end %>
+
+    </div>
+
+</div>

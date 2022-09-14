@@ -1,4 +1,77 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+
 body {
-    background-color: hotpink;
+    background-color: #0e0c0d;
+    text-align: center;
+    font-family: 'Combo', sans-serif;
+    /* background-color: #d1c2aa; */
+}
+
+h2 {
+    font-size: 60px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+    color: white;
+}
+
+input {
+
+    padding: 5px;
+    border-radius: 10px;
+    background-color:  #0e0c0d;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: 'Combo', sans-serif;
+    font-size: 20px;
+
+}
+
+select {
+
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #0e0c0d;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: 'Combo', sans-serif;
+    font-size: 20px;
+
+}
+
+label {
+
+    color: white;
+    font-size: 20px;
+}
+
+.newflightform {
+
+    margin: 0 auto;
+    width: 60%;
+    height: 100%;
+    padding: 40px;
+    background-image: url("https://images.unsplash.com/photo-1507812984078-917a274065be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80");
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+}
+
+.newplaneform {
+
+    margin: 0 auto;
+    width: 70%;
+    height: 90%;
+    padding: 40px;
+    background-image: url("https://images.unsplash.com/photo-1556388158-158ea5ccacbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center; 
+    text-align: left; 
+
+
 }
