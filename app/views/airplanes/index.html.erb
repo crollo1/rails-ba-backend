@@ -1,0 +1,15 @@
+
+<h2>All Planes</h2>
+
+<ul>
+
+  <% @airplane.each do |airplane| %>
+    <li>
+      <%= airplane.name %>
+      <%= airplane.row %>
+      <%= airplane.column %>
+
+    </li>
+  <% end %>
+
+</ul>

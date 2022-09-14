@@ -5,24 +5,32 @@ class AirplanesController < ApplicationController
     skip_before_action :verify_authenticity_token, raise: false
 
 
-    def new
-        
+    def new  # /airplanes/new
+
+        @airplane = Airplane.new
+
     end #new
 
     def create
+    
+        @airplane = Airplane.create!(
+            name: params[:airplane][:name],
+            row: params[:airplane][:row],
+            column: params[:airplane][:column]
+        ) 
 
-        airplane = Airplane.create content: params[:content]
+        # if @airplane.persisted?
+        #     render json: @airplane
+        # else
+        #     render json: { error: 'Count not create airplane' }, status: 422
+        # end
 
-        if airplane.persisted?
-            render json: airplane
-        else
-            render json: { error: 'Count not create airplane' }, status: 422
-        end
+        redirect_to airplanes_path
 
     end #create
 
     def index
-        render json: Airplane.all
+        @airplane = Airplane.all
     end #index
 
     def show
