@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get '/airplanes' => 'airplanes#index'       # Airplane.all
   post '/airplanes' => 'airplanes#create'     # Airplane.create
+  get '/flights/:origin/:destination' => 'flights#show' # Flight search results
 
   resources :airplanes
   resources :flights

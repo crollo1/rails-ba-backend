@@ -11,23 +11,18 @@ class FlightsController < ApplicationController
   def create
     @flight = Flight.create!(
 
-      date: params[:flight][:date],
-      flight: params[:flight][:flight],
-      origin: params[:flight][:flight],
-      destination: params[:flight][:flight],
-
+        date: params[:flight][:date],
+        flight: params[:flight][:flight],
+        origin: params[:flight][:origin],
+        destination: params[:flight][:destination]
+      
     )
-
-    # if flight.persisted?
-    #     render json: flight
-    # else
-    #     render json: { error: 'Count not create flight' }, status: 422
-    # end
 
     redirect_to flights_path
   end #create
 
   def index
+    
     render json: Flight.all
     # @flight = Flight.all
 
@@ -38,7 +33,26 @@ class FlightsController < ApplicationController
 
   # def update
 
-  # end #update
+        @flight = Flight.all
+
+    end #index
+
+    def show
+        
+        # @flight = Flight.where(["origin = ? and destination = ?", "SYD", "SUV"])
+        @flights = Flight.where(["origin = ? and destination = ?", params[:origin], params[:destination]])
+
+        
+
+    end # show
+
+    # def update
+        
+    # end #update
+
+    def destroy
+        
+    end #destroy
 
   def destroy
   end #destroy
