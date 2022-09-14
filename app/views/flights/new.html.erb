@@ -1,3 +1,4 @@
+<h2>New Flight</h2>
 
 <%= form_with model: @flight, local: true do |f| %>
 
@@ -20,6 +21,8 @@
     <br>
     <%= f.text_field :destination %>
     <br><br>
+
+    <%= f.collection_select :airplane_id, Airplane.order(:name), :id, :name %>
 
     <%= f.submit %>
 
