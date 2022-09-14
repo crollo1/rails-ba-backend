@@ -4,17 +4,13 @@ Airplane.create!(
 
   name: "747",
   column: 4,
-  row: 24,
+  row: 24
 
 )
 
 puts "Created #{Airplane.count} airplane."
 
-<<<<<<< HEAD
-
-=======
 # rails g model Flight date:date flight:string origin:string destination:string
->>>>>>> 75a800250b5e911fdc99871181eb3b5938ec2398
 
 Flight.destroy_all
 

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
     
+  
   # API endpoints for Secret model
   # - to be used by React frontend AJAX requests
 
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :airplanes
   resources :flights
+  resources :user
 
 
 end
