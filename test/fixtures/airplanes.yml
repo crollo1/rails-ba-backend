@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  rows: 1
-  columns: MyString
+  name: MyString
+  row: 1
+  column: 1
 
 two:
-  rows: 1
-  columns: MyString
+  name: MyString
+  row: 1
+  column: 1

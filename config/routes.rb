@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   get '/airplanes' => 'airplanes#index'       # Airplane.all
   post '/airplanes' => 'airplanes#create'     # Airplane.create
 
+  resources :airplanes
+  resources :flights
+
+
 end

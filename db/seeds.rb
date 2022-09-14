@@ -1,18 +1,33 @@
 
 Airplane.destroy_all
 
-Airplane.create!({
+Airplane.create!(
 
     name: '747',
 
-    columns: 'A', 'B', 'C', 'D',
+    column: 4,
 
-    rows: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-    11, 12, 13, 14, 15, 16, 17, 18, 
-    19, 20, 21, 22, 23, 24,
-    
+    row: 24
 
 
-})
+)
 
 puts "Created #{ Airplane.count } airplane."
+
+
+# rails g model Flight date:date flight:string origin:string destination:string 
+
+Flight.destroy_all
+
+Flight.create!(
+
+    date: Date.parse('December 09, 2011'),
+    flight: '13',
+    origin: 'SYD',
+    destination: 'SUV'
+
+)
+
+puts "Created #{ Flight.count } flight."
+
+# rails 
