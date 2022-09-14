@@ -10,13 +10,13 @@ class AirplanesController < ApplicationController
     end #new
 
     def create
-        
-        secret = Airplane.create content: params[:content]
+
+        airplane = Airplane.create content: params[:content]
 
         if airplane.persisted?
             render json: airplane
         else
-            render json: { error: 'Count not create secret' }, status: 422
+            render json: { error: 'Count not create airplane' }, status: 422
         end
 
     end #create

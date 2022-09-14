@@ -1,5 +1,5 @@
 class Airplane < ApplicationRecord
 
-    # has_many :flights
-    
+    has_many :flights
+
 end

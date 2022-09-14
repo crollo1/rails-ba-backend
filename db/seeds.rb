@@ -15,7 +15,6 @@ Airplane.create!(
 puts "Created #{ Airplane.count } airplane."
 
 
-# rails g model Flight date:date flight:string origin:string destination:string 
 
 Flight.destroy_all
 
