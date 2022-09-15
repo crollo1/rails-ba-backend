@@ -1,12 +1,9 @@
 Airplane.destroy_all
 
-Airplane.create!(
+a1 = Airplane.create!(name: "747", column: 4, row: 24)
+a2 = Airplane.create!(name: "737", column: 4, row: 24)
+a3 = Airplane.create!(name: "A-380", column: 4, row: 24)
 
-  name: "747",
-  column: 4,
-  row: 24
-
-)
 
 puts "Created #{Airplane.count} airplane."
 
@@ -19,8 +16,26 @@ f1 = Flight.create!(
   date: Date.parse("December 09, 2011"),
   flight: "65",
   origin: "SYD",
-  destination: "SUV",
+  destination: "SUV"
 
+)
+
+f2 = Flight.create!(
+
+    date: Date.parse("December 09, 2011"),
+    flight: "89",
+    origin: "LAX",
+    destination: "CDG"
+  
+)
+
+f3 = Flight.create!(
+
+    date: Date.parse("December 09, 2011"),
+    flight: "23",
+    origin: "MEL",
+    destination: "TYO"
+  
 )
 
 puts "Created #{Flight.count} flight."
@@ -55,5 +70,8 @@ puts "Created #{Reservation.count} reservations."
 f1.reservations << res1 << res3 << res5
 
 
+################## Create flight associations ####################
 
-
+a1.flights << f3
+a2.flights << f2
+a3.flights << f1

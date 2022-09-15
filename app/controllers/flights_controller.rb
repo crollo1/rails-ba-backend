@@ -41,6 +41,14 @@ class FlightsController < ApplicationController
 
     end # show
 
+    def select_seat
+
+        booking = Flight.find(params[:id])
+
+        render json: booking
+        
+    end # select_seat
+
     # def update
         
     # end #update

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/airplanes' => 'airplanes#index'       # Airplane.all
   post '/airplanes' => 'airplanes#create'     # Airplane.create
   get '/flights/:origin/:destination' => 'flights#show' # Flight search results
+  get '/flights/:id/' => 'flights#select_seat' # Flight 
+
 
   resources :airplanes
   resources :flights
